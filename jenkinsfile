@@ -1,19 +1,21 @@
 pipeline {
   agent any
   stages {
-    state('install') {
+    stage('Install') {
       steps {
         sh 'cat .env'
+        sh 'docker'
+        sh 'docker --version'
         sh 'npm install'
       }
     }
-    state('lint fix') {
+    stage('Lint fix') {
       steps {
         sh 'npm run lint'
         sh 'npx commitlint'
       }
     }
-    stage('test') {
+    stage('Test') {
       steps {
         sh 'npm run test'
       }
