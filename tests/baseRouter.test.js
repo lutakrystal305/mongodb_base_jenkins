@@ -4,7 +4,7 @@
 // const app = require('../index');
 
 describe('test music router', () => {
-  it('should test true', async () => {
+  it('should testt true', async () => {
     expect(true).toBe(true);
     // const res = await request(app).get('/music');
     // expect(res.statusCode).toEqual(200);
