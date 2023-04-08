@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+  stages {
+    state('install') {
+      steps {
+        sh 'cat .env'
+        sh 'npm install'
+      }
+    }
+    state('lint fix') {
+      steps {
+        sh 'npm run lint'
+        sh 'npx commitlint'
+      }
+    }
+    stage('test') {
+      steps {
+        sh 'npm run test'
+      }
+    }
+  }
+}

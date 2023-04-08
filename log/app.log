@@ -1,0 +1,17 @@
+info: Okelaaa {"timestamp":"2023-03-06T16:11:34.815Z"}
+error: [ERROR] Odd: Fuck you {"timestamp":"2023-03-06T16:11:34.818Z"}
+info: Okelaaa {"timestamp":"2023-03-06T16:11:50.873Z"}
+error: [ERROR] Odd: Fuck you {"timestamp":"2023-03-06T16:11:50.874Z"}
+info: Okelaaa {"timestamp":"2023-03-07T14:44:21.167Z"}
+error: [ERROR] Odd: Fuck you {"timestamp":"2023-03-07T14:44:21.172Z"}
+error: [ERROR] Odd: Fuck you {"timestamp":"2023-03-07T14:55:40.465Z"}
+error: [ERROR] Odd: Fuck you {"timestamp":"2023-03-07T14:56:12.038Z"}
+error: [ERROR] Odd: Fuck you {"timestamp":"2023-03-07T14:56:47.769Z"}
+error: [ERROR] Odd: Fuck you {"timestamp":"2023-03-07T14:57:01.796Z"}
+error: [ERROR] Odd: Fuck you {"timestamp":"2023-03-07T14:57:22.630Z"}
+error: [ERROR] Odd: Fuck you {"timestamp":"2023-03-07T14:57:27.731Z"}
+error: [ERROR] Odd: Fuck you {"timestamp":"2023-03-07T14:58:39.951Z"}
+error: [ERROR] Odd: Fuck you {"timestamp":"2023-03-07T14:59:11.274Z"}
+info: Okelaaa {"timestamp":"2023-04-02T09:37:10.112Z"}
+error: [ERROR] Odd: Fuck you {"timestamp":"2023-04-02T09:37:10.114Z"}
+error: [ERROR] TypeError: Right-hand side of 'instanceof' is not callable: Fuck you {"timestamp":"2023-04-03T12:41:45.837Z"}

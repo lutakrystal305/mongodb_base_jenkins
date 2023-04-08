@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@root/*": ["./*"],
+      "@controller/*": ["./controllers/*"],
+      "@utils/*": ["./utils/*"],
+      "@repository/*": ["./repositories/*"],
+      "@routes/*": ["./routes/*"],
+      "@service/*": ["./services/*"],
+      "@@/*": ["./*"]
+    },
+  },
+  "env": {
+      "jest": true
+    },
+  "exclude": ["node_modules"]
+}

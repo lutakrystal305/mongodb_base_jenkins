@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    image: base-nodejs-mongodb:v1 #registry
+    environment:
+      - PORT=${PORT}
+    # command: cat /.env
+    ports:
+      - "${PORT}:${PORT}"
+    restart: 'unless-stopped'
+    

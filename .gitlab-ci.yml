@@ -1,0 +1,78 @@
+image: node:19
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+stages:
+  - lint
+  - test
+  - build
+
+before_script:
+  - cat .env
+  - npm install
+
+
+lint_code:
+  stage: lint
+  script:
+    - npm run lint
+lint_commit:
+  stage: lint
+  script:
+    - echo "$CI_COMMIT_MESSAGE" | npx commitlint
+
+test:
+  stage: test
+  script:
+    - npm run test
+
+build:
+  stage: build
+  script:
+    - echo "Hello world"
+
+# image:  docker-20.10.16
+# service: 
+#   - docker:dind
+# stages:
+#   - build
+#   - lint
+#   - test
+
+# cache:
+#   key: ${CI_COMMIT_REF_SLUG}
+#   paths:
+#     - node_modules/
+
+# before_script:
+#   - docker version
+#   - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+
+# build_docker:
+#   stage: build
+#   script: 
+#     - docker pull $CI_REGISTRY_IMAGE:latest || true
+#     - docker build --cache-from $CI_REGISTRY_IMAGE:latest --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA .
+#     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+#     - docker push $CI_REGISTRY_IMAGE:latest
+
+# lint:
+#   stage: lint
+#   before_script:
+#     - apk add --no-cache py3-pip py3-setuptools python3 python3-dev libffi-dev openssl-dev gcc libc-dev make
+#     - pip install docker-compose
+#     - docker-compose version
+#     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+#     - docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+#     - docker tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA $CI_REGISTRY_IMAGE:latest
+#   script:
+#     - docker-compose up -d
+#     - sleep 5
+#     - docker-compose exec -T app npm run lint
+
+# test:
+#   stage: test
+#   script:
+#     - docker-compose exec -T app npm run test
